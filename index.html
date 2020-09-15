@@ -198,6 +198,8 @@ var iching = {
 }
 </script>
 		<script>
+			
+ 
 
 let lines = [];
 
@@ -482,6 +484,13 @@ class Hexagram{
             }
           }
         }
+				
+	function getQuantumNumber() {
+	    var url = ;
+	    $.get("https://qrng.anu.edu.au/wp-content/plugins/colours-plugin/get_block_hex.php", function(data){
+			console.log('RANDOM NUMBER',data)
+	    });
+	}
         console.log(trigramNbs[bottomTrigramNumber] + trigramNbs[topTrigramNumber])
         let binaryString = trigramNbs[bottomTrigramNumber] + trigramNbs[topTrigramNumber]
         let binaryLines = [...binaryString]
@@ -499,6 +508,7 @@ class Hexagram{
         myHex.hexagramNumber = number;
         myHex.sixlines = sixlines
         console.log(myHex)
+	console.log(getQuantumNumber())
 			}
 			
 		</script>
