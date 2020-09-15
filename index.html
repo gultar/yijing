@@ -487,9 +487,12 @@ class Hexagram{
         }
 				
 	function getQuantumNumber() {
-	    $.get("https://qrng.anu.edu.au/wp-content/plugins/colours-plugin/get_block_hex.php", function(data){
-			console.log('RANDOM NUMBER',data)
-	    });
+	    $.get("https://qrng.anu.edu.au/wp-content/plugins/colours-plugin/get_block_hex.php", function(data, err){
+		console.log(data, err)
+	    })
+	     .done(function(muppet){
+		    console.log('muppet', muppet)
+	      })
 	}
         console.log(trigramNbs[bottomTrigramNumber] + trigramNbs[topTrigramNumber])
         let binaryString = trigramNbs[bottomTrigramNumber] + trigramNbs[topTrigramNumber]
