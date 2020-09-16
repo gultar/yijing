@@ -512,13 +512,14 @@ class Hexagram{
           $('#lines').append("<p>"+myHex.drawLine(sixlines[i])+"</p>");
           
         }
+	getQuantumNumber()
         $('#title').html(iching.posts[number -1].title)
 				$('#text').html(iching.posts[number -1].text)
         myHex.trigrams = [bottomTrigramNumber, topTrigramNumber]
         myHex.hexagramNumber = number;
         myHex.sixlines = sixlines
         console.log(myHex)
-	getQuantumNumber()
+	
 			}
 			
 		</script>
