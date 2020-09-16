@@ -487,7 +487,8 @@ class Hexagram{
         }
 				
 	function getQuantumNumber() {
-	    $.get("https://qrng.anu.edu.au/wp-content/plugins/colours-plugin/get_block_hex.php", function(data, err){
+	   console.log('trying') 
+	   $.get("https://qrng.anu.edu.au/wp-content/plugins/colours-plugin/get_block_hex.php", function(data, err){
 		console.log(data, err)
 	    })
 	     .done(function(muppet){
