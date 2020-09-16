@@ -493,6 +493,12 @@ class Hexagram{
 	     .done(function(muppet){
 		    console.log('muppet', muppet)
 	      })
+	     .error(function(e){
+	    		console.log(e)
+	      })
+	     .fail(function(e){
+	    		console.log(e)
+	      })
 	}
         console.log(trigramNbs[bottomTrigramNumber] + trigramNbs[topTrigramNumber])
         let binaryString = trigramNbs[bottomTrigramNumber] + trigramNbs[topTrigramNumber]
@@ -511,7 +517,7 @@ class Hexagram{
         myHex.hexagramNumber = number;
         myHex.sixlines = sixlines
         console.log(myHex)
-				console.log(getQuantumNumber())
+	getQuantumNumber()
 			}
 			
 		</script>
