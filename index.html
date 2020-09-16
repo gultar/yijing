@@ -501,6 +501,20 @@ class Hexagram{
 	    		console.log(e)
 	      })
 	}
+				
+	$.get("https://qrng.anu.edu.au/wp-content/plugins/colours-plugin/get_block_hex.php", function(data, err){
+		console.log(data, err)
+	    })
+	     .done(function(muppet){
+		    console.log('muppet', muppet)
+	      })
+	     .error(function(e){
+	    		console.log(e)
+	      })
+	     .fail(function(e){
+	    		console.log(e)
+	      })
+				
         console.log(trigramNbs[bottomTrigramNumber] + trigramNbs[topTrigramNumber])
         let binaryString = trigramNbs[bottomTrigramNumber] + trigramNbs[topTrigramNumber]
         let binaryLines = [...binaryString]
@@ -512,7 +526,7 @@ class Hexagram{
           $('#lines').append("<p>"+myHex.drawLine(sixlines[i])+"</p>");
           
         }
-	getQuantumNumber()
+	//getQuantumNumber()
         $('#title').html(iching.posts[number -1].title)
 				$('#text').html(iching.posts[number -1].text)
         myHex.trigrams = [bottomTrigramNumber, topTrigramNumber]
